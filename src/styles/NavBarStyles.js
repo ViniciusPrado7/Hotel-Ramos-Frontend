@@ -5,7 +5,6 @@ export const Nav = styled.nav`
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
 background: white;
 
 `
@@ -14,16 +13,20 @@ display: flex;
 border-left: 1.5px solid black;
 width: 2rem;
 padding-left: .5rem;
-margin-right: 5rem;
+margin-left: 20rem;;
 text-transform: uppercase;
 font-weight:
+`
+export const LinkHome = styled(Link) `
+text-decoration: none;
+color: black;
 `
 export const UlNav = styled.ul `
 display: flex;
 flex-direction: colunm;
 gap: 2rem;
 list-style: none;
-margin-left: 15rem;
+margin-left: 20rem;
 `
 
 export const LiNav = styled.li `
@@ -50,7 +53,7 @@ padding: .5rem;
 text-transform: uppercase;
 color: black;
 background: white;
-margin-left: 2rem;
+margin-left: 18.2rem;
 cursor: pointer;
 
 

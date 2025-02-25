@@ -1,23 +1,25 @@
 import React from 'react'
-import { ButtonNav, LiNav, Nav, NavListaItem, TituloNav, UlNav } from '../../styles/NavBarStyles'
+import { ButtonNav, LiNav, LinkHome, Nav, NavListaItem, TituloNav, UlNav } from '../../styles/NavBarStyles'
 
 function NavBar() {
   return (
     <Nav>
-        <TituloNav>Hotel Rameira</TituloNav>
+        <TituloNav>
+            <LinkHome to ='/'> Hotel Ramos </LinkHome>  
+        </TituloNav>
 
         <UlNav>
             <LiNav>
-                <NavListaItem to='# '> Início </NavListaItem>
+                <NavListaItem to='/ '> Início </NavListaItem>
             </LiNav>
             <LiNav>
-                <NavListaItem to='#'> Explore </NavListaItem>
+                <NavListaItem to='/explore'> Explore </NavListaItem>
             </LiNav>
             <LiNav>
-                <NavListaItem to='#'> Quartos </NavListaItem>
+                <NavListaItem to='/quartos'> Quartos </NavListaItem>
             </LiNav>
             <LiNav>
-                <NavListaItem to='#'> Amenidades </NavListaItem>
+                <NavListaItem to='/amenidades'> Amenidades </NavListaItem>
             </LiNav>
         </UlNav>
 
