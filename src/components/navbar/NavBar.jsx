@@ -1,31 +1,40 @@
-import React from 'react'
-import { ButtonNav, LiNav, LinkHome, Nav, NavListaItem, TituloNav, UlNav } from '../../styles/NavBarStyles'
+import React, { useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ButtonNav, LiNav, LinkHome, MenuToggle, Nav, NavListaItem, TituloNav, UlNav } from '../../styles/NavBarStyles';
 
 function NavBar() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <Nav>
-        <TituloNav>
-            <LinkHome to ='/'> Hotel Ramos </LinkHome>  
-        </TituloNav>
+      <TituloNav>
+        <LinkHome to="/">Hotel Ramos</LinkHome>
+      </TituloNav>
 
-        <UlNav>
-            <LiNav>
-                <NavListaItem to='/ '> Início </NavListaItem>
-            </LiNav>
-            <LiNav>
-                <NavListaItem to='/explore'> Explore </NavListaItem>
-            </LiNav>
-            <LiNav>
-                <NavListaItem to='/quartos'> Quartos </NavListaItem>
-            </LiNav>
-            <LiNav>
-                <NavListaItem to='/amenidades'> Amenidades </NavListaItem>
-            </LiNav>
-        </UlNav>
+      {/* Ícone do menu hambúrguer */}
+      <MenuToggle onClick={() => setMenuAberto(!menuAberto)}>
+        <GiHamburgerMenu size={30} />
+      </MenuToggle>
 
-        <ButtonNav>Reserve já</ButtonNav>
+      {/* Lista de navegação condicional */}
+      <UlNav className={menuAberto ? "aberto" : ""}>
+        <LiNav>
+          <NavListaItem to="/">Início</NavListaItem>
+        </LiNav>
+        <LiNav>
+          <NavListaItem to="/explore">Explore</NavListaItem>
+        </LiNav>
+        <LiNav>
+          <NavListaItem to="/quartos">Quartos</NavListaItem>
+        </LiNav>
+        <LiNav>
+          <NavListaItem to="/amenidades">Amenidades</NavListaItem>
+        </LiNav>
+      </UlNav>
+
+      <ButtonNav>Reserve já</ButtonNav>
     </Nav>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
