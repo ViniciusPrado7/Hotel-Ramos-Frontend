@@ -22,7 +22,7 @@ export const TituloNav = styled.h1`
     margin-left: .8rem;
   }
 
-  @media (min-width: 431px) and (max-width: 600px) {
+  @media (min-width: 431px) and (max-width: 599px) {
     width: 1rem;
     margin-left: 1rem;
   }
@@ -57,7 +57,7 @@ export const UlNav = styled.ul`
     text-align: left;
   }
 
-  @media (min-width: 431px) and (max-width: 600px) {
+  @media (min-width: 431px) and (max-width: 599px) {
     margin-left: 4rem;
     margin-right: 0rem;
     gap: 1rem;
@@ -92,7 +92,7 @@ export const ButtonNav = styled.button`
     margin-left: 13.5rem;
   }
 
-  @media (min-width: 431px) and (max-width: 600px) {
+  @media (min-width: 431px) and (max-width: 599px) {
     width: 150px;
     padding: .5rem;
     margin-left: .8rem;

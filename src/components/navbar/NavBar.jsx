@@ -5,6 +5,10 @@ import { ButtonNav, LiNav, LinkHome, MenuToggle, Nav, NavListaItem, TituloNav, U
 function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
 
+  const handleMenuClick = () => {
+    setMenuAberto(!menuAberto)
+  }
+
   return (
     <Nav>
       <TituloNav>
@@ -12,7 +16,7 @@ function NavBar() {
       </TituloNav>
 
       {/* Ícone do menu hambúrguer */}
-      <MenuToggle onClick={() => setMenuAberto(!menuAberto)}>
+      <MenuToggle onClick = {handleMenuClick}>
         <GiHamburgerMenu size={30} />
       </MenuToggle>
 

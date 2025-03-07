@@ -7,7 +7,7 @@ margin: 2rem 20rem 0rem 20rem;
  margin: 2rem 2rem 0 1rem;
 };
 
-@media (min-width: 431px) and (max-width: 600px) {
+@media (min-width: 431px) and (max-width: 599px) {
   margin: 2rem 1rem 0 1rem;
   }
 
@@ -52,7 +52,7 @@ margin: 1rem 1rem 1rem 0;
  margin: .8rem .8rem .8rem 0;
 };
 
-@media (min-width: 431px) and (max-width: 600px) {
+@media (min-width: 431px) and (max-width: 599px) {
     width: 49%;
   }
 

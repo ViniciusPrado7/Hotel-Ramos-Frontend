@@ -11,7 +11,7 @@ margin: 2rem 20rem 0rem 20rem;
 margin: 2rem 1rem 0rem 1rem;
 };
 
-@media (min-width: 431px) and (max-width: 600px) {
+@media (min-width: 431px) and (max-width: 599px) {
   margin: 2rem 1rem 0 1rem;
   };
 `
@@ -34,7 +34,7 @@ margin: 0;
 font-size: .8rem;
 };
 
-@media (min-width: 431px) and (max-width: 600px) {
+@media (min-width: 431px) and (max-width: 599px) {
   width: 75%;
   }
 

@@ -15,7 +15,7 @@ height: 35rem;
 width: 100%;
 }
 
-@media (min-width: 431px) and (max-width: 600px) {
+@media (min-width: 431px) and (max-width: 599px) {
   height: 40rem;
   }
 `
