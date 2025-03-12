@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ContainerQuartos = styled.div`
@@ -122,6 +123,8 @@ export const ContainerPrecoQuartos = styled.div`
     align-items: center;
     width: 30%;
     gap: 1rem;
+`
+export const LinkMaisInfoQuartos = styled(Link)`
 `
 export const BotaoMaisInfoQuartos = styled.button`
     width: 185px;

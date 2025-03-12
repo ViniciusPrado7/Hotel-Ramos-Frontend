@@ -1,7 +1,22 @@
-import React from 'react'
-import { BotaoMaisInfoQuartos, ContainerPrecoQuartos, ContainerQuartos, ContainerTxtQuartos, ItemListaQuartos, ListaQuartos, QuartoImg, SubcontainerQuartos, TituloQuartos, TxtQuartos } from '../styles/QuartosStyles'
+import React, { useEffect, useState } from 'react'
+import { BotaoMaisInfoQuartos, ContainerPrecoQuartos, ContainerQuartos, ContainerTxtQuartos, ItemListaQuartos, LinkMaisInfoQuartos, ListaQuartos, QuartoImg, SubcontainerQuartos, TituloQuartos, TxtQuartos } from '../styles/QuartosStyles'
+import axios from 'axios';
 
 function Quartos() {
+
+    const [quartos, setQuartos] = useState([]);
+    useEffect(() => {
+        const fetchQuartos = async () => {
+            try {
+                const resp = await axios.get('http://localhost:3001/hotel/quartos');
+                setQuartos(resp.data.result)
+            } catch (error) {
+                console.error('Erro ao listar quartos.', error);
+            }
+        }
+        fetchQuartos();
+    }, []);
+
     return (
         <ContainerQuartos> {/* Container column */}
 
@@ -10,18 +25,26 @@ function Quartos() {
             <SubcontainerQuartos> {/* Container quarto row */}
                 <QuartoImg src="/assets/quarto-casal-quartospg.png" alt="Foto do quarto de casal" />
                 <ContainerTxtQuartos>  {/* Container txt quarto column */}
-                    <TxtQuartos style={{ opacity: '1', fontSize: '1.2rem' }}>Quarto de Casal</TxtQuartos>
-                    <TxtQuartos>Nossos quartos de casal oferecem vistas panorâmicas do mar.</TxtQuartos>
-                    <ListaQuartos>
-                        <ItemListaQuartos>Tamanho: 150 m²</ItemListaQuartos>
-                        <ItemListaQuartos>Camas: 1 Casal</ItemListaQuartos>
-                    </ListaQuartos>
+                    {Array.isArray(quartos) && quartos.map((quarto) => (
+                        <div>
+                            <TxtQuartos style={{ opacity: '1', fontSize: '1.2rem' }}>{quarto.nome_quarto}</TxtQuartos>
+                            <TxtQuartos>Nossos quartos de casal oferecem vistas panorâmicas do mar.</TxtQuartos>
+                            <ListaQuartos>
+                                <ItemListaQuartos>Tamanho: 150 m²</ItemListaQuartos>
+                                <ItemListaQuartos>Camas: 1 Casal</ItemListaQuartos>
+                            </ListaQuartos>
+                        </div>
+
+                    ))}
+
                 </ContainerTxtQuartos>
 
                 <ContainerPrecoQuartos> {/* Container txt btn quarto column */}
                     <TxtQuartos>A partir de:</TxtQuartos>
                     <TxtQuartos style={{ opacity: '1', fontSize: '1.2rem', fontWeight: '700' }}>R$800,00</TxtQuartos>
-                    <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    <LinkMaisInfoQuartos to="/reserva/casal">
+                        <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    </LinkMaisInfoQuartos>
                 </ContainerPrecoQuartos>
             </SubcontainerQuartos>
 
@@ -39,7 +62,9 @@ function Quartos() {
                 <ContainerPrecoQuartos> {/* Container txt btn quarto column */}
                     <TxtQuartos>A partir de:</TxtQuartos>
                     <TxtQuartos style={{ opacity: '1', fontSize: '1.2rem', fontWeight: '700' }}>R$2500,00</TxtQuartos>
-                    <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    <LinkMaisInfoQuartos to="/reserva/luxo">
+                        <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    </LinkMaisInfoQuartos>
                 </ContainerPrecoQuartos>
             </SubcontainerQuartos>
 
@@ -57,7 +82,10 @@ function Quartos() {
                 <ContainerPrecoQuartos> {/* Container txt btn quarto column */}
                     <TxtQuartos>A partir de:</TxtQuartos>
                     <TxtQuartos style={{ opacity: '1', fontSize: '1.2rem', fontWeight: '700' }}>R$400,00</TxtQuartos>
-                    <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    <LinkMaisInfoQuartos to="/reserva/solteiro">
+                        <BotaoMaisInfoQuartos>Mais Informações</BotaoMaisInfoQuartos>
+                    </LinkMaisInfoQuartos>
+
                 </ContainerPrecoQuartos>
             </SubcontainerQuartos>
         </ContainerQuartos>
