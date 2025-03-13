@@ -4,7 +4,7 @@ export const ContainerExplore = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem 0 0 0;
 
     @media (min-width: 360px) and (max-width: 430px){
         margin: 2rem 2rem 0 1rem;
@@ -18,7 +18,7 @@ export const ExploreImgTxt = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 46%;
+    width: 64.8%;
     gap: 2rem;
 
     @media (min-width: 600px) and (max-width: 800px) {
@@ -40,6 +40,7 @@ export const ExploreTxt = styled.p`
     font-size: 1.1rem;
     font-style: italic;
     opacity: .5;
+    width: 50%;
 
     @media (min-width: 600px) and (max-width: 800px) {
         font-size: .7rem;
@@ -58,7 +59,8 @@ export const ExploreImgs = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 3.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
+    
 
     @media (min-width: 600px) and (max-width: 800px) {
         width: 80%;
@@ -75,10 +77,18 @@ export const ExploreImgs = styled.div`
         gap: 2rem;
     }
 `
+export const ExploreImgCafe = styled.img`
+height: 8rem;
+`
 export const ExploreImg = styled.img`
+
+    height: 15rem;
+    width: 36rem;
+
     @media (min-width: 360px) and (max-width: 430px){
         height: 10rem;
         margin: .8rem .8rem .8rem 0;
+        
     };
 
     @media (min-width: 431px) and (max-width: 599px) {

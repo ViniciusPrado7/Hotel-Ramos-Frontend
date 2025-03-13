@@ -1,5 +1,5 @@
 import React from 'react'
-import { AmenidadesImg, ContainerAmenidades, ItemListaAmenidades, ListaAmenidades, SubcontainerAmenidades, TituloAmenidades, TxtAmenidades } from '../styles/AmenidadesStyles'
+import { AmenidadesImg, AmenidadesImgPiscina, ContainerAmenidades, ItemListaAmenidades, ListaAmenidades, SubcontainerAmenidades, SubcontainerAmenidadesPiscina, TituloAmenidades, TxtAmenidades } from '../styles/AmenidadesStyles'
 
 function Amenidades() {
     return (
@@ -11,7 +11,7 @@ function Amenidades() {
                 <TxtAmenidades>Venha curtir com sua família no Hotel Ramos. Temos muitas amenidades e serviços para deixar sua experiência incrível e extremamente agradável.</TxtAmenidades>
             </SubcontainerAmenidades>
 
-            <SubcontainerAmenidades> {/* Container row */}
+            <SubcontainerAmenidadesPiscina> {/* Container row */}
                 <ListaAmenidades>
                     <ItemListaAmenidades>Restaurante premiado</ItemListaAmenidades>
                     <ItemListaAmenidades>Spa e piscina coberta</ItemListaAmenidades>
@@ -25,8 +25,8 @@ function Amenidades() {
                     <ItemListaAmenidades>Água mineral - contemplar</ItemListaAmenidades>
                     <ItemListaAmenidades>Animais de estimação permitidos</ItemListaAmenidades>
                 </ListaAmenidades>
-                <AmenidadesImg src="/assets/area-piscina 2.png" alt="Foto da área da piscina" />
-            </SubcontainerAmenidades>
+                <AmenidadesImgPiscina src="/assets/area-piscina 2.png" alt="Foto da área da piscina" />
+            </SubcontainerAmenidadesPiscina>
         </ContainerAmenidades>
     )
 }
